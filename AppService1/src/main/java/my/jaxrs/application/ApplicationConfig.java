@@ -1,5 +1,6 @@
 package my.jaxrs.application;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,11 +25,10 @@ public class ApplicationConfig extends Application {
         //resources.add(com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider.class);
         //instead let's do it manually:
         resources.add(my.jaxrs.provider.JacksonJsonProvider.class);
-        resources.add(my.jaxrs.resource.MessageResource.class);
-        resources.add(my.jaxrs.resource.PersonResource.class);
+        resources.add(my.jaxrs.resource.F2CResource.class);
         //==> we could also choose packages, see below getProperties()
         
-        System.out.println("REST configuration ended successfully.");
+        System.out.println("REST configuration ended successfully:\n" + Arrays.deepToString(resources.toArray()));
         
         return resources;
     }

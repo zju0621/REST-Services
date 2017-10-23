@@ -34,7 +34,7 @@ public class JacksonJsonProvider implements ContextResolver<ObjectMapper> {
      
     @Override
     public ObjectMapper getContext(Class<?> type) {
-        System.out.println("MyJacksonProvider.getContext() called with type: "+type);
+        System.out.println("JacksonProvider.getContext() called with type: "+type);
         return MAPPER;
     } 
 }
