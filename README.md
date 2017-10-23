@@ -1,6 +1,6 @@
 
-Welcome to the AWS CodeStar sample web application
-==================================================
+Welcome to the Temperature Conversion Web Application
+======================================================
 
 This sample code helps get you started with 
 This is a simple web app demonstrating a simple Java web application which handles the conversion of temperature input by user in a web page with a REST service running on Java Web Application server backend.
