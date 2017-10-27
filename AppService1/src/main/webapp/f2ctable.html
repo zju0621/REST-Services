@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Temperature Converter</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- https://datatables.net/manual/installation -->
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>	
+	
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize jQuery
+		$(document).ready( function () {
+    			$('#table_id').DataTable();
+            handleGetF2CTable();
+         });// $(function()
+     </script>	
+</head>
+
+<body class="container">
+  <div class="jumbotron">
+	<h2>Fahrenheit to Celsius Convertion Table | AJAX GET call</h2>
+    <button id="getTemperatureTable">Get F/C Conversion Table</button>	
+    <div style="width: 30vw">
+		<table id="f2c_table" class="display">
+		    <thead>
+		        <tr>
+		            <th>Fahrenheit</th>
+		            <th>Celsius</th>
+		        </tr>
+		    </thead>
+    		</table>	
+    </div>
+	<hr/>
+	<h2>JSON Source</h2>
+	<textarea rows="20" cols="150" id="f2c_table_div">
+    </textarea>
+  </div>  
+</body>
+</html>

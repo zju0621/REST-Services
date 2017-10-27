@@ -1,13 +1,13 @@
 function handleConvert(){
   $("#postTemperature").on("click", function(){
-		var f = $("#idFahrenheit").val();
-		var temp = {
+	var f = $("#idFahrenheit").val();
+	var temp = {
 			celsius: "", 
 			fahrenheit: f
-		};
-		tempStr = JSON.stringify(temp);
+	};
+	tempStr = JSON.stringify(temp);
 		
-		var param = {
+	var param = {
         url: "service/temperature/convert",
         type: "POST",
         data: tempStr,
