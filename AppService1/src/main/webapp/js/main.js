@@ -31,8 +31,12 @@ function handleGetF2CTable(){
 	    cache: false,
 	    dataType: "json",
 	};
+		
 	$.ajax(param).done(function( data ) {
-	   $('#f2c_table').DataTable( {
+		// data is prepared on server side and used to populate the DataTable 
+		// @See /src/main/java/my/jaxrs/resource/F2CResource.java
+		// @See https://datatables.net/manual/data/
+		$('#f2c_table').DataTable( {
 		    data: data,
 		    columns: [
 		        { data: 'fahrenheit' },
@@ -40,8 +44,8 @@ function handleGetF2CTable(){
 		    ]
 		} );		   
 		   
-	   var text = JSON.stringify(data);	
-	   $("#f2c_table_div").text(text);
+		var text = JSON.stringify(data);	
+		$("#f2c_table_div").text(text);
 	});
   }); // function()   
 }
